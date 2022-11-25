@@ -1,0 +1,111 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --darkblue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--cream);
+    text-align: center;
+}
+
+main {
+    /* padding: 2rem 1rem; */
+    background-color: var(--white);
+    display: grid;
+    max-width: 575px;
+    overflow: hidden;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin: 100px auto;
+}
+
+/* all p font size */
+p {
+    font-size: 14px;
+}
+
+/* img */
+.product-img img {
+    width: 100%;
+}
+
+/* product text */
+
+.product-desc {
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+p {
+    color: var(--grayish-blue);
+}
+
+.perfume-title {
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.perfume-name {
+    color: var(--darkblue);
+    font-family: "fraunces";
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* price and button */
+.price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.discounted-price {
+    font-family: "fraunces";
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--dark-cyan);
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+/* button */
+button {
+    cursor: pointer;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1em 2em;
+    font-weight: 500;
+    transition: background 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button:active,
+button:hover {
+    background: hsl(158, 36%, 17%);
+}
+
+@media (min-width: 575px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        border-radius: 0.5rem;
+    }
+}
